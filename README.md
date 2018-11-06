@@ -16,7 +16,7 @@
 
 ## Github pages
 
-[Demo](github.pages/cloth-fit)
+[Demo](https://shimkonaz.github.io/cloth-fit/)
 
 ## Mockups
 
