@@ -1,0 +1,121 @@
+@import './base.scss';
+@import './variables.scss';
+
+header {
+  height: $top;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, red, green, blue, yellow);
+  box-shadow: 0 2px 5px $grey;
+  @include flex(center, center, row);
+}
+
+main {
+  height: calc(100% - (#{$top} * 2));
+  width: 100%;
+  position: absolute;
+  top: $top;
+  @include flex(space-around, center, column);
+
+  section {
+    width: 100%;
+    @include flex(flex-start, center, row);
+
+    &.measures {
+      height: 60%;
+
+      div {
+        height: 100%;
+        @include flex(center, center, row);
+      }
+      
+      .vertical-measures {
+        width: 35%;
+      }
+  
+      .human-body {
+        width: 30%;
+      }
+  
+      .horizontal-measures {
+        width: 35%;
+      }
+    }
+    
+    &.results {
+      height: 40%;
+      width: 100%;
+      padding: 10px 30px 0 30px;
+      background-color: #fff;
+
+      .results-table {
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        background-color: #fff;
+        
+        th, td {
+          padding: 10px 0 15px 10px;
+          box-sizing: border-box;
+          text-align: center;
+          flex: 1 0 10em;
+        }
+
+        thead {
+          border-bottom: 2px solid $grey;
+        }
+
+        &, thead, tbody {
+          display: flex;
+          flex-direction: column;
+        }
+
+        tr {
+          display: flex;
+          flex: 1 0;
+        }
+
+        tbody {
+          height: 100%;
+          width: 100%;
+          display: block;
+          overflow-y: scroll;
+          -ms-overflow-style: none;  // IE 10+
+          overflow: -moz-scrollbars-none;  // Firefox
+          &::-webkit-scrollbar { 
+            display: none;  // Safari and Chrome
+          }
+
+          @media screen and (min-aspect-ratio: 1/1) {
+            overflow-y: auto;
+          }
+        }
+        .row {
+          background-color: #fff;
+          
+          &:hover {
+            background-color: lightgrey;
+            border-radius: 5px;
+            cursor: arrow;
+          }
+
+          .type {
+            border-right: 2px solid $grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: $top;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  box-shadow: -1px 0 5px $grey;
+  @include flex(space-around, center, row);
+}

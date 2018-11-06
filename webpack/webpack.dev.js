@@ -30,13 +30,16 @@ module.exports = {
           {
             loader: 'css-loader', // translates CSS into CommonJS
             query: {
-              modules: true,
+              modules: false,
               camelCase: true,
               localIdentName: '[name]__[local]___[hash:base64:5]'
             }
           },
           {
-            loader: 'sass-loader' // compiles Sass to CSS
+            loader: 'sass-loader', // compiles Sass to CSS
+            options: {
+              sourceMap: true
+            }
           }
         ]
       }
