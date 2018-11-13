@@ -195,7 +195,7 @@ main {
             overflow-y: auto;
           }
         }
-        .row {
+        .row, tr {
           background-color: #fff;
           
           &:hover {
@@ -204,7 +204,7 @@ main {
             cursor: arrow;
           }
 
-          .type {
+          .type, td {
             border-right: 2px solid $grey;
           }
         }

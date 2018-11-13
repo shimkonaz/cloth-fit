@@ -1,5 +1,5 @@
 const changeOutput = slider => {
-  const output = document.getElementById(slider.id + '-output');
+  const output = document.getElementById(slider.id.split('-')[0]);
   output.innerHTML = slider.value + ' cm';
 };
 

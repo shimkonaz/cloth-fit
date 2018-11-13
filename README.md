@@ -1,23 +1,56 @@
 
 # ClothFit
  
-> Description - calculation of the ideal size of clothing based on human physiological data. It will be useful for everyone who wants to find the perfect size of clothing and always has this problem
-
-## ELEKS Front-Camp 2018 JS project
-
-* Course curator - [Volodymyr Shevchuk](https://github.com/dosandk)
-* Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
+The main idea is a calculation of the ideal size of clothing based on human physiological data. It will be useful for everyone who wants to find the perfect size of clothing and always has this problem
 
 ## Tech stack
 
 * Pure JavaScript
 * HTML/CSS
 * SCSS
+* Jest
 
-## Github pages
+### [Demo](https://shimkonaz.github.io/cloth-fit/)
 
-[Demo](https://shimkonaz.github.io/cloth-fit/)
+### Installation and usage
 
-## Mockups
+```
+git clone https://github.com/shimkonaz/cloth-fit.git
+cd cloth-fit
+npm i
+npm run start
+```
+
+### Running tests
+
+```
+npm run test
+```
+
+### Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/shimkonaz/cloth-fit/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests
+
+### Mockups
 
 [Link](https://wireframepro.mockflow.com/view/M47748dcb9dd06a6e8e3f171daa5ab0b61539697070424#/page/d191c796e16246fbb5087e784657fe90)  
+
+### Issue
+
+[Template]
+()
+
+### Pull Request
+
+[Template]
+()
+
+### Teachers
+[Volodymyr Shevchuk](https://github.com/dosandk)
+
+License
+
+This project is licensed under the [MIT License](https://github.com/shimkonaz/cloth-fit/blob/master/LICENSE.md)
+
+### Additional
+Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
