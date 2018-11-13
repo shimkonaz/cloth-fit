@@ -5,7 +5,7 @@ export const getSize = () => {
 
   for (const elem of arr) {
     const parsed = parseInt(elem.innerHTML);
-    if(findStr(elem, 'sleeve') && 
+    if (findStr(elem, 'sleeve') && 
       parsed > 50 && 
       parsed < 100) {
       
@@ -13,7 +13,7 @@ export const getSize = () => {
         type: 'Shirt',
         size: 'M'
       });
-    } else if(
+    } else if (
       findStr(elem, 'sleeve') && 
       parsed > 100 && 
       parsed < 246
@@ -145,8 +145,8 @@ export const getSize = () => {
   }
 
   return res;
-}
+};
 
 const findStr = (elem, str) => {
   return elem.id.toString().includes(str);
-}
+};
