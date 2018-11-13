@@ -16,15 +16,90 @@
   <main>
     <section class="measures">
       <div class="vertical-measures">
-        verical
+        <div class="height">
+          <p class="measure-title">Height</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="height-slider">
+          <div id="height-slider-output" class="slider-output">50 cm</div>
+        </div>
+        <div class="sleeve">
+          <p class="measure-title">Sleeve length</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="sleeve-slider">
+          <div id="sleeve-slider-output" class="slider-output">50 cm</div>
+        </div>
+        <div class="inseam">
+          <p class="measure-title">Inseam</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="inseam-slider">
+          <div id="inseam-slider-output" class="slider-output">50 cm</div>
+        </div>
       </div>
       
       <div class="human-body">
-        body
+        <img src="./src/assets/man-body.svg" alt="man-body">
       </div>
   
       <div class="horizontal-measures">
-        horizontal
+        <div class="chest">
+          <p class="measure-title">Chest</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="chest-slider">
+          <div id="chest-slider-output" class="slider-output">50 cm</div>
+        </div>
+        <div class="waist">
+          <p class="measure-title">Waist</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="waist-slider">
+          <div id="waist-slider-output" class="slider-output">50 cm</div>
+        </div>
+        <div class="hip">
+          <p class="measure-title">Hip</p>
+          <input 
+            type="range" 
+            min="50" 
+            max="246" 
+            value="50" 
+            class="slider" 
+            id="hip-slider">
+          <div id="hip-slider-output" class="slider-output">50 cm</div>
+        </div>
+
+        <div class="get-size">
+          <select name="sex" id="select-sex" class="select">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <button class="get-size-btn button" id="get-size-btn">
+            Get size
+          </button>
+        </div>
       </div>
     </section>
 
@@ -50,14 +125,17 @@
             <td class="type">T-Shirt</td>
             <td class="size">L</td>
           </tr>
+          <tr class="row">
+            <td class="type">T-Shirt</td>
+            <td class="size">L</td>
+          </tr>
+          <tr class="row">
+            <td class="type">T-Shirt</td>
+            <td class="size">L</td>
+          </tr>
         </tbody>
       </table>
     </section>
   </main>
-  
-  <footer>
-    <p>CLothFit</p>
-    <p>All rights reserved, 2018</p>
-  </footer>
 </body>
 </html>
