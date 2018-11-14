@@ -1,12 +1,11 @@
-export const getSize = () => {
-  
+const getSize = () => {
   const res = [];
   const arr = document.getElementsByClassName('slider-output');
   const tbody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
+  tbody.innerHTML = '';
 
   for (const elem of arr) {
-    switchMeasures(elem, res);
-    
+    switchMeasures(elem, res); 
   }
 
   for (const row of res) {
@@ -19,11 +18,11 @@ const getSizeValue = v => {
 
   if (v >= 50 && v < 100) {
     res = 'S';
-  } else if (v > 100 && v < 150) {
+  } else if (v >= 100 && v < 150) {
     res = 'M';
-  } else if (v > 150 && v < 200) {
+  } else if (v >= 150 && v < 200) {
     res = 'L';
-  } else if (v > 200 && v < 246) {
+  } else if (v >= 200 && v <= 246) {
     res = 'XL';
   } else {
     res = '';
@@ -88,3 +87,7 @@ const createRow = (table, type, size) => {
   cell1.innerHTML = type;
   cell2.innerHTML = size;
 };
+
+module.exports.getSize = getSize;
+module.exports.getSizeValue = getSizeValue;
+module.exports.switchMeasures = switchMeasures;
