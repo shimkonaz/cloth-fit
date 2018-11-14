@@ -195,16 +195,16 @@ main {
             overflow-y: auto;
           }
         }
-        .row, tr {
+        .row {
           background-color: #fff;
           
           &:hover {
             background-color: lightgrey;
             border-radius: 5px;
-            cursor: arrow;
+            cursor: pointer;
           }
 
-          .type, td {
+          .type {
             border-right: 2px solid $grey;
           }
         }
