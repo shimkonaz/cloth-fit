@@ -8,8 +8,8 @@ module.exports = {
     './src/main.js'
   ],
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '../')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist')
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
@@ -21,17 +21,6 @@ module.exports = {
           path.resolve(__dirname, '../js')
         ],
         use: []
-      },
-      {
-        test: /\.css$/,
-        use: [ 
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'     
-          } 
-        ]
       },
       {
         test: /\.scss$/,
@@ -62,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.css"
+      filename: "styles.[contenthash].css"
     }),
     new HtmlWebpackPlugin({
       template: path.resolve('./index.html')
