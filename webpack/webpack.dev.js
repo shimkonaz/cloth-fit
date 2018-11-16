@@ -9,7 +9,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../')
   },
   devtool: 'cheap-module-eval-source-map',
   module: {
@@ -21,6 +21,17 @@ module.exports = {
           path.resolve(__dirname, '../js')
         ],
         use: []
+      },
+      {
+        test: /\.css$/,
+        use: [ 
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'     
+          } 
+        ]
       },
       {
         test: /\.scss$/,
