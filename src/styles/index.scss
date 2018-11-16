@@ -7,6 +7,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   background: linear-gradient(to right, red, green, blue, yellow);
   box-shadow: 0 2px 5px $grey;
   @include flex(center, center, row);
@@ -17,27 +18,53 @@ main {
   width: 100%;
   position: absolute;
   top: $top;
-  @include flex(space-around, center, column);
+
+  @media screen and (max-width: 640px) {
+
+    section {
+      &.measures {
+        // height: 80%;
+        display: flex;
+        align-content: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .measure-block {
+          height: 400px;
+          width: 100%;
+        }
+
+        .horizontal-measures {
+          .sliders {
+            width: 100%;
+          }
+          .get-size {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 
   section {
     width: 100%;
     @include flex(flex-start, center, row);
 
     &.measures {
-      height: 60%;
+      // height: 80%;
+      @include flex(space-around, center, row);
 
       div {
-        height: 100%;
+        height: 80%;
         @include flex(center, center, row);
       }
       
       .vertical-measures {
-        width: 35%;
         @include flex(space-around, center, row);
         
         div {
-          height: 100%;
           padding: 20px 0;
+          text-align: center;
           @include flex(space-around, center, column);
         }
 
@@ -46,42 +73,41 @@ main {
         }
 
         .slider-output {
-          height: 50%;
+          height: 10%;
           width: 50%;
           @include flex(center, center, row);
-        }
-
-        .height {
-          height: 100%;
-          width: 100%;
-          @include flex(space-between, center, column);
         }
       }
   
       .human-body {
-        width: 30%;
-
         img {
-          height: 90%;
-          width: 90%;
+          height: 95%;
+          width: 95%;
         }
       }
   
       .horizontal-measures {
-        width: 35%;
-        padding: 5%;
+        padding: 20px;
         @include flex(center, center, column);
 
         div {
           @include flex(space-around, center, column);
         }
 
+        .sliders {
+          .measure {
+            padding: 5px;
+          }
+        }
+
         .get-size {
-          width: 100%;
+          height: 130px;
+          @include flex(space-around, center, column);
 
           .select {
             min-height: 30px;
-            width: 100px;
+            min-width: 100px;
+            margin: 10px 0;
             padding: 5px;
             background-color: none;
             border: 1px solid $grey;
@@ -90,8 +116,9 @@ main {
           }
 
           &-btn {
-            width: 100px;
+            min-width: 100px;
             min-height: 30px;
+            margin: 10px 0;
             padding: 5px;
             background-color: blue;
             color: #fff;
@@ -104,15 +131,14 @@ main {
 
       .slider {
         -webkit-appearance: none;
-        appearance: none; 
-        width: 90%;
-        height: 2px;
+        appearance: none;
+        height: 4px;
+        border-radius: 4px;
         background: #a7a4a4;
         outline: none;
         opacity: 0.7;
         -webkit-transition: .2s;
         transition: opacity .2s;
-        align-self: flex-end;
         
         &:hover {
           opacity: 1;
@@ -121,16 +147,17 @@ main {
         &::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
-          width: 15px;
-          height: 15px;
+          width: 25px;
+          height: 25px;
           border-radius: 50%;
           background: #4CAF50;
           cursor: pointer;
         }
 
         &::-moz-range-thumb {
-          width: 15px;
-          height: 15px;
+          width: 25px;
+          height: 25px;
+          border: none;
           border-radius: 50%;
           background: #4CAF50;
           cursor: pointer;
@@ -138,19 +165,15 @@ main {
       }
 
       .slider-output {
-        height: 20%;
+        height: 10%;
         width: 100%;
-
-        // &:hover {
-        //   border-bottom: 1px solid $grey;
-        // }
       } 
     }
     
     &.results {
-      height: 40%;
+      height: 220px;
       width: 100%;
-      padding: 10px 30px 0 30px;
+      padding: 10px 30px;
       background-color: #fff;
 
       .results-table {
@@ -185,16 +208,18 @@ main {
           width: 100%;
           display: block;
           overflow-y: scroll;
-          -ms-overflow-style: none;  // IE 10+
-          overflow: -moz-scrollbars-none;  // Firefox
+          -ms-overflow-style: none !important;  // IE 10+
+          overflow-y: -moz-scrollbars-none !important;  // Firefox
+          
           &::-webkit-scrollbar { 
-            display: none;  // Safari and Chrome
+            display: none !important;  // Safari and Chrome
           }
 
           @media screen and (min-aspect-ratio: 1/1) {
-            overflow-y: auto;
+            overflow-y: auto !important;
           }
         }
+
         .row {
           background-color: #fff;
           

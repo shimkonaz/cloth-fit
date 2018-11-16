@@ -15,7 +15,7 @@
   
   <main>
     <section class="measures">
-      <div class="vertical-measures">
+      <div class="vertical-measures measure-block">
         <div class="height">
           <p class="measure-title">Height</p>
           <input 
@@ -51,43 +51,45 @@
         </div>
       </div>
       
-      <div class="human-body">
+      <div class="human-body measure-block">
         <img src="./src/assets/man-body.svg" alt="man-body">
       </div>
   
-      <div class="horizontal-measures">
-        <div class="chest">
-          <p class="measure-title">Chest</p>
-          <input 
-            type="range" 
-            min="50" 
-            max="246" 
-            value="50" 
-            class="slider" 
-            id="chest-slider">
-          <div id="chest" class="slider-output">50 cm</div>
-        </div>
-        <div class="waist">
-          <p class="measure-title">Waist</p>
-          <input 
-            type="range" 
-            min="50" 
-            max="246" 
-            value="50" 
-            class="slider" 
-            id="waist-slider">
-          <div id="waist" class="slider-output">50 cm</div>
-        </div>
-        <div class="hip">
-          <p class="measure-title">Hip</p>
-          <input 
-            type="range" 
-            min="50" 
-            max="246" 
-            value="50" 
-            class="slider" 
-            id="hip-slider">
-          <div id="hip" class="slider-output">50 cm</div>
+      <div class="horizontal-measures measure-block">
+        <div class="sliders">
+          <div class="chest measure">
+            <p class="measure-title">Chest</p>
+            <input 
+              type="range" 
+              min="50" 
+              max="246" 
+              value="50" 
+              class="slider" 
+              id="chest-slider">
+            <div id="chest" class="slider-output">50 cm</div>
+          </div>
+          <div class="waist measure">
+            <p class="measure-title">Waist</p>
+            <input 
+              type="range" 
+              min="50" 
+              max="246" 
+              value="50" 
+              class="slider" 
+              id="waist-slider">
+            <div id="waist" class="slider-output">50 cm</div>
+          </div>
+          <div class="hip measure">
+            <p class="measure-title">Hip</p>
+            <input 
+              type="range" 
+              min="50" 
+              max="246" 
+              value="50" 
+              class="slider" 
+              id="hip-slider">
+            <div id="hip" class="slider-output">50 cm</div>
+          </div>
         </div>
 
         <div class="get-size">

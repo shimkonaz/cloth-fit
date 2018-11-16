@@ -58,7 +58,7 @@ const switchMeasures = (elem, res) => {
 
     case 'height':
       res.push({
-        type: 'Smoking',
+        type: 'Tuxedo',
         size: getSizeValue(v)
       });
       break;
