@@ -35,16 +35,6 @@ Please read [CONTRIBUTING.md](https://github.com/shimkonaz/cloth-fit/blob/master
 
 [Link](https://wireframepro.mockflow.com/view/M47748dcb9dd06a6e8e3f171daa5ab0b61539697070424#/page/d191c796e16246fbb5087e784657fe90)  
 
-### Issue
-
-[Template]
-()
-
-### Pull Request
-
-[Template]
-()
-
 ### Teachers
 [Volodymyr Shevchuk](https://github.com/dosandk)
 
@@ -53,4 +43,4 @@ License
 This project is licensed under the [MIT License](https://github.com/shimkonaz/cloth-fit/blob/master/LICENSE.md)
 
 ### Additional
-Front-camp [facebook](https://www.facebook.com/groups/270300106928894)
+Front-camp on [facebook](https://www.facebook.com/groups/270300106928894)

@@ -23,7 +23,6 @@ main {
 
     section {
       &.measures {
-        // height: 80%;
         display: flex;
         align-content: flex-start;
         flex-direction: column;
@@ -51,7 +50,6 @@ main {
     @include flex(flex-start, center, row);
 
     &.measures {
-      // height: 80%;
       @include flex(space-around, center, row);
 
       div {
@@ -208,11 +206,11 @@ main {
           width: 100%;
           display: block;
           overflow-y: scroll;
-          -ms-overflow-style: none !important;  // IE 10+
-          overflow-y: -moz-scrollbars-none !important;  // Firefox
+          -ms-overflow-style: none !important;
+          overflow-y: -moz-scrollbars-none !important;
           
           &::-webkit-scrollbar { 
-            display: none !important;  // Safari and Chrome
+            display: none !important;
           }
 
           @media screen and (min-aspect-ratio: 1/1) {
