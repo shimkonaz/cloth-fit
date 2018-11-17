@@ -9,9 +9,21 @@ module.exports = {
   ],
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   devtool: 'cheap-module-eval-source-map',
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },
   module: {
     rules: [
       {
@@ -25,33 +37,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: 'style-loader' // creates style nodes from JS strings
-          },
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader', // translates CSS into CommonJS
-            query: {
-              modules: false,
-              camelCase: true,
-              localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          },
-          {
-            loader: 'sass-loader', // compiles Sass to CSS
-            options: {
-              sourceMap: true
-            }
-          }
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+		      "sass-loader"
         ]
       }
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles.[contenthash].css"
+      filename: "[name].css"
     }),
     new HtmlWebpackPlugin({
       template: path.resolve('./index.html')
