@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack/webpack.dev.js --open --watch",
+    "build": "webpack --config=webpack/webpack.dev.js",
     "test": "jest",
     "lint": "eslint ./src",
     "lint:watch": "esw --watch",
