@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -49,11 +50,17 @@ module.exports = {
       filename: "[name].css"
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve('./index.html')
-    })
+      template: path.resolve('./src/index.html')
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve('./src/assets'), 
+        to: path.resolve('./dist/assets')
+      }
+    ])
   ],
   devServer: {
-    contentBase: path.join(__dirname, '../'),
+    contentBase: path.join(__dirname, './src'),
     compress: true,
     historyApiFallback: true
   }
