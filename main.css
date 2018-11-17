@@ -1,0 +1,205 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+header {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, red, green, blue, yellow);
+  box-shadow: 0 2px 5px #969595;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+main {
+  height: calc(100% - (50px * 2));
+  width: 100%;
+  position: absolute;
+  top: 50px; }
+  @media screen and (max-width: 640px) {
+    main section.measures {
+      display: flex;
+      align-content: flex-start;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      main section.measures .measure-block {
+        height: 400px;
+        width: 100%; }
+      main section.measures .horizontal-measures .sliders {
+        width: 100%; }
+      main section.measures .horizontal-measures .get-size {
+        width: 100%; } }
+  main section {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row; }
+    main section.measures {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row; }
+      main section.measures div {
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; }
+      main section.measures .vertical-measures {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row; }
+        main section.measures .vertical-measures div {
+          padding: 20px 0;
+          text-align: center;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column; }
+        main section.measures .vertical-measures .slider {
+          transform: rotate(90deg); }
+        main section.measures .vertical-measures .slider-output {
+          height: 10%;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row; }
+      main section.measures .human-body img {
+        height: 95%;
+        width: 95%; }
+      main section.measures .horizontal-measures {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        main section.measures .horizontal-measures div {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column; }
+        main section.measures .horizontal-measures .sliders .measure {
+          padding: 5px; }
+        main section.measures .horizontal-measures .get-size {
+          height: 130px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column; }
+          main section.measures .horizontal-measures .get-size .select {
+            min-height: 30px;
+            min-width: 100px;
+            margin: 10px 0;
+            padding: 5px;
+            background-color: none;
+            border: 1px solid #969595;
+            border-radius: 5px;
+            cursor: pointer; }
+          main section.measures .horizontal-measures .get-size-btn {
+            min-width: 100px;
+            min-height: 30px;
+            margin: 10px 0;
+            padding: 5px;
+            background-color: blue;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer; }
+      main section.measures .slider {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 4px;
+        border-radius: 4px;
+        background: #a7a4a4;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s; }
+        main section.measures .slider:hover {
+          opacity: 1; }
+        main section.measures .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer; }
+        main section.measures .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          border: none;
+          border-radius: 50%;
+          background: #4CAF50;
+          cursor: pointer; }
+      main section.measures .slider-output {
+        height: 10%;
+        width: 100%; }
+    main section.results {
+      height: 220px;
+      width: 100%;
+      padding: 10px 30px;
+      background-color: #fff; }
+      main section.results .results-table {
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        background-color: #fff; }
+        main section.results .results-table th, main section.results .results-table td {
+          padding: 10px 0 15px 10px;
+          box-sizing: border-box;
+          text-align: center;
+          flex: 1 0 10em; }
+        main section.results .results-table thead {
+          border-bottom: 2px solid #969595; }
+        main section.results .results-table, main section.results .results-table thead, main section.results .results-table tbody {
+          display: flex;
+          flex-direction: column; }
+        main section.results .results-table tr {
+          display: flex;
+          flex: 1 0; }
+        main section.results .results-table tbody {
+          height: 100%;
+          width: 100%;
+          display: block;
+          overflow-y: scroll;
+          -ms-overflow-style: none !important;
+          overflow-y: -moz-scrollbars-none !important; }
+          main section.results .results-table tbody::-webkit-scrollbar {
+            display: none !important; }
+          @media screen and (min-aspect-ratio: 1 / 1) {
+            main section.results .results-table tbody {
+              overflow-y: auto !important; } }
+        main section.results .results-table .row {
+          background-color: #fff; }
+          main section.results .results-table .row:hover {
+            background-color: lightgrey;
+            border-radius: 5px;
+            cursor: pointer; }
+          main section.results .results-table .row .type {
+            border-right: 2px solid #969595; }
+
+footer {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #bbcece;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row; }
+
